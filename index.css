@@ -1,0 +1,144 @@
+:root {
+  --cls-main: #cc231e;
+  --cls-secondary: #0f8a5f;
+  --cls-third: #235e6f;
+
+  --border-radius: 20px;
+  --font-family: "Shizuru", cursive;
+  --font-family-sec: "Roboto Condensed", sans-serif;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+}
+/* ---------- Main Content ------------- */
+.main-content {
+  background: url(/images/back.jpg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+/* ---- Text Area ------- */
+.text-area {
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  font-family: var(--font-family-sec);
+  font-size: 3rem;
+  font-weight: bold;
+  /* color: var(--cls-secondary); */
+  color: black;
+}
+.career {
+  font-family: var(--font-family);
+  font-size: 6rem;
+  color: var(--cls-main);
+}
+.description {
+  font-family: var(--font-family-sec);
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--cls-third);
+}
+/* -----------Video Area -------------- */
+.video-area {
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ent-area {
+  width: 45%;
+  border-radius: var(--border-radius);
+  border: 4px solid var(--cls-main);
+}
+/* ------------ New Year ------------- */
+.new {
+  font-family: var(--font-family);
+  color: var(--cls-secondary);
+}
+
+/* --------- Responsive --------- */
+@media (min-width: 300px) {
+  .main-content {
+      height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    position: relative;
+    background: url(/images/wp5097820.jpg);
+  }
+  /* ----- Text Area ---------- */
+  .text-area {
+    margin-top: 30px;
+    padding-bottom: 50px;
+    animation-name: title;
+    animation-duration: 0.5s;
+    animation: ease-in-out;
+    position: relative;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .career {
+    font-size: 3rem;
+    font-family: var(--font-family);
+  }
+  .description {
+    font-size: 1.5rem;
+  }
+  /* -------- Video Area --------- */
+  .video-area {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .ent-area {
+    height: 80%;
+  }
+}
+
+.career {
+  position: relative;
+}
+.career::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  border-right: 2px solid var(--cls-main);
+  animation: blink 1s infinite ease;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* ------ Watch --------- */
+button {
+  margin-top: 20px;
+  border: 3px solid var(--cls-main);
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+button a {
+  text-decoration: none;
+  color: var(--cls-main);
+  font-family: var(--font-family-sec);
+  font-weight: bold;
+  font-size: 1rem;
+}
