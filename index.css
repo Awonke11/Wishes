@@ -68,7 +68,7 @@
 /* --------- Responsive --------- */
 @media (min-width: 300px) {
   .main-content {
-      height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -141,4 +141,59 @@ button a {
   font-family: var(--font-family-sec);
   font-weight: bold;
   font-size: 1rem;
+}
+
+@media (min-width: 700px) {
+  .main-content {
+    background: url(/images/wp5097820.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* ---- Text Area ------- */
+  .text-area {
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .title {
+    font-family: var(--font-family-sec);
+    font-size: 2rem;
+    font-weight: bold;
+    /* color: var(--cls-secondary); */
+    color: black;
+  }
+  .career {
+    font-family: var(--font-family);
+    font-size: 4rem;
+    color: var(--cls-main);
+  }
+  .description {
+    font-family: var(--font-family-sec);
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--cls-third);
+  }
+  /* -----------Video Area -------------- */
+  .video-area {
+    /* background-color: green; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .ent-area {
+    height: 80%;
+    border-radius: var(--border-radius);
+    border: 4px solid var(--cls-main);
+  }
+  /* ------------ New Year ------------- */
+  .new {
+    font-family: var(--font-family);
+    color: var(--cls-secondary);
+  }
 }
